@@ -4,7 +4,7 @@ const jwt = require("jsonwebtoken")
 const SECRET_KEY = "cat bites dog"
 const cors = require("cors")
 // const CLIENT_URL = process.env.FRONT;
-const CLIENT_URL = "https://huntjob.netlify.app/"
+const CLIENT_URL = "https://huntjob.netlify.app"
 
 // router.use(
 //   cors({
