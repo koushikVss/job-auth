@@ -4,18 +4,16 @@ const jwt = require("jsonwebtoken")
 const SECRET_KEY = "cat bites dog"
 const cors = require("cors")
 // const CLIENT_URL = process.env.FRONT;
-const CLIENT_URL = "http://localhost:3000/"
+const CLIENT_URL = "https://huntjob.netlify.app/"
 
-
-router.use(
-  cors({
-      // origin: process.env.FRONT,//"http://localhost:3000",
-      origin: "http://localhost:3000",
-      methods: "GET,POST,PUT,DELETE",
-      credentials: true,
-  })
-)
-
+// router.use(
+//   cors({
+//       // origin: process.env.FRONT,//"http://localhost:3000",
+//       origin: "http://localhost:3000",
+//       methods: "GET,POST,PUT,DELETE",
+//       credentials: true,
+//   })
+// )
 
 router.get("/login/success", (req, res) => {
   if (req.user) {

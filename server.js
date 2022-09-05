@@ -45,10 +45,9 @@ app.use(cors())
 app.use(
     cors({
         // origin: process.env.FRONT,//"http://localhost:3000",
-        origin: "http://localhost:3000",
+        origin: "https://huntjob.netlify.app/",
         methods: "GET,POST,PUT,DELETE",
         credentials: true,
-
     })
 )
 app.use(logger('dev'));
