@@ -41,6 +41,16 @@ mongoose.connection.once('open', (err) => {
     }
 });
 
+
+app.use(
+    cors({
+        // origin: process.env.FRONT,//"http://localhost:3000",
+        origin: "http://localhost:3000",
+        methods: "GET,POST,PUT,DELETE",
+        credentials: true,
+
+    })
+)
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(session({
@@ -62,15 +72,7 @@ app.use(passport.session());
 
 passport.use(repo.Login());
 
-app.use(
-    cors({
-        // origin: process.env.FRONT,//"http://localhost:3000",
-        origin: "*",
-        methods: "GET,POST,PUT,DELETE",
-        credentials: true,
 
-    })
-)
 
 app.use("/auth", authRoute);
 
