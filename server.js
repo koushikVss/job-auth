@@ -73,9 +73,14 @@ app.use(
 
 app.use("/auth", authRoute);
 
-
-
-
+app.use(
+    cors({
+        // origin: process.env.FRONT,//"http://localhost:3000",
+        origin: "http://localhost:3000",
+        methods: "GET,POST,PUT,DELETE",
+        credentials: true,
+    })
+)
 app.use('/api/v1/auth', routes);
 
 
