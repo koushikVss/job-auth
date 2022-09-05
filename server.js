@@ -41,7 +41,7 @@ mongoose.connection.once('open', (err) => {
     }
 });
 
-
+app.use(cors())
 app.use(
     cors({
         // origin: process.env.FRONT,//"http://localhost:3000",
