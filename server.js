@@ -42,15 +42,15 @@ mongoose.connection.once('open', (err) => {
 });
 
 app.use(cors())
-app.use(
-    cors({
-        // origin: process.env.FRONT,//"http://localhost:3000",
-        origin: "https://huntjob.netlify.app",
-        methods: "GET,POST,PUT,DELETE",
-        credentials: true,
-        allowedHeaders:'*'
-    })
-)
+// app.use(
+//     cors({
+//         // origin: process.env.FRONT,//"http://localhost:3000",
+//         origin: "https://huntjob.netlify.app",
+//         methods: "GET,POST,PUT,DELETE",
+//         credentials: true,
+//         allowedHeaders:'*'
+//     })
+// )
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(session({
