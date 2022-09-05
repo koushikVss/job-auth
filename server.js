@@ -48,6 +48,7 @@ app.use(
         origin: "https://huntjob.netlify.app",
         methods: "GET,POST,PUT,DELETE",
         credentials: true,
+        allowedHeaders:'*'
     })
 )
 app.use(logger('dev'));
